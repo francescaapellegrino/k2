@@ -56,6 +56,8 @@ public class AdminControl extends HttpServlet {
 				request.getSession().setAttribute("ControlOrd", false);
 			} catch (SQLException e) {
 				e.printStackTrace();
+		        RequestDispatcher dispatcher = request.getRequestDispatcher("500.jsp");
+		        dispatcher.forward(request, response);
 			}
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/controllo-ordini.jsp?email=" + email);
 			dispatcher.forward(request, response);

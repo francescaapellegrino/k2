@@ -67,7 +67,8 @@ public class UserModel {
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			return bean;
+	        RequestDispatcher dispatcher = request.getRequestDispatcher("500.jsp");
+	        dispatcher.forward(request, response);
 		}
 	}
 }
