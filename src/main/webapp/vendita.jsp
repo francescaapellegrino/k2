@@ -27,7 +27,7 @@
 			<div class="user-details">
 				<div class="input-box">
 					<span class="details">Nome prodotto</span>
-					<input type="text" name="nome" maxlength="50" placeholder="Inserire nome prodotto" autofocus required/>
+					<input type="text" name="nome" maxlength="50" placeholder="Inserire nome prodotto" required pattern="[^<>/\]+" title="I caratteri <, > e / non sono consentiti" autofocus required/>
 				</div>
 				<div class="input-box">
 					<span class="details">Prezzo</span>
